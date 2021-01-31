@@ -1,0 +1,26 @@
+version: "3.7"
+services:
+  app:
+    build: app
+    restart: always
+    #networks:
+      #- backend-network
+    volumes:
+      - images-data:/app
+    ports:
+      - "5001:5000"
+
+#  web:
+#    build: web
+#    restart: always
+#    ports:
+#      - 80:80
+#    networks:
+#      - frontend-network
+
+volumes:
+  images-data:
+
+#networks:
+  #backend-network:
+#  frontend-network:
